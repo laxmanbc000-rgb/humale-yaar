@@ -15,11 +15,11 @@ object Store {
         )
     }
 
-    fun apiKey(c: Context): String = prefs(c).getString("api_key", "") ?: ""
-    fun setApiKey(c: Context, v: String) = prefs(c).edit().putString("api_key", v.trim()).apply()
+    fun apiKey(c: Context): String = prefs(c).getString("gm_key", "") ?: ""
+    fun setApiKey(c: Context, v: String) = prefs(c).edit().putString("gm_key", v.trim()).apply()
 
-    fun model(c: Context): String = prefs(c).getString("model", "claude-sonnet-4-5") ?: "claude-sonnet-4-5"
-    fun setModel(c: Context, v: String) = prefs(c).edit().putString("model", v.trim()).apply()
+    fun model(c: Context): String = prefs(c).getString("gm_model", "gemini-2.5-flash") ?: "gemini-2.5-flash"
+    fun setModel(c: Context, v: String) = prefs(c).edit().putString("gm_model", v.trim()).apply()
 
     fun wake(c: Context): Boolean = prefs(c).getBoolean("wake", false)
     fun setWake(c: Context, v: Boolean) = prefs(c).edit().putBoolean("wake", v).apply()

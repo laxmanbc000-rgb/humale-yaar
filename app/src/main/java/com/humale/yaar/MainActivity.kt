@@ -149,7 +149,7 @@ fun SettingsDialog(onClose: () -> Unit, onClear: () -> Unit) {
         title = { Text("सेटिङ") },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(key, { key = it }, label = { Text("Claude API key") },
+                OutlinedTextField(key, { key = it }, label = { Text("Gemini API key") },
                     visualTransformation = PasswordVisualTransformation(), singleLine = true)
                 OutlinedTextField(model, { model = it }, label = { Text("मोडेल") }, singleLine = true)
                 Row(verticalAlignment = Alignment.CenterVertically) {
